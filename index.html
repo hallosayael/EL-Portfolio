@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portfolio Web3 / Blockchain / Crypto" />
+  <title>Portfolio Web3 — EL</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Tailwind config (optional fine-tuning)
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ["Inter", "ui-sans-serif", "system-ui", "Segoe UI", "Roboto", "Helvetica", "Arial", "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji"] },
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    /* Smooth reveal */
+    .reveal {opacity:0; transform:translateY(12px); transition:all .6s ease}
+    .reveal.show {opacity:1; transform:none}
+    .gradient-text {background: linear-gradient(90deg,#14b8a6,#6366f1); -webkit-background-clip:text; background-clip:text; color:transparent}
+  </style>
+</head>
+<body class="bg-white text-slate-800 antialiased dark:bg-slate-950 dark:text-slate-200">
+  <!-- Header / Navbar -->
+  <header class="sticky top-0 z-40 backdrop-blur bg-white/70 dark:bg-slate-950/70 border-b border-slate-200/60 dark:border-slate-800/60">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
+      <a href="#home" class="font-semibold tracking-tight">[Nama&nbsp;Lisa Suprapto]</a>
+      <nav class="hidden md:flex gap-6 text-sm">
+        <a href="#home" class="hover:text-teal-600">Beranda</a>
+        <a href="#skills" class="hover:text-teal-600">Keahlian</a>
+        <a href="#projects" class="hover:text-teal-600">Proyek</a>
+        <a href="#achievements" class="hover:text-teal-600">Pencapaian</a>
+        <a href="#community" class="hover:text-teal-600">Komunitas</a>
+        <a href="#contact" class="hover:text-teal-600">Kontak</a>
+      </nav>
+      <div class="flex items-center gap-2">
+        <button id="themeBtn" class="inline-flex items-center rounded-xl px-3 py-1.5 text-sm border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-900">🌙</button>
+        <a href="#contact" class="hidden sm:inline-flex items-center rounded-xl px-3.5 py-1.5 text-sm font-medium bg-teal-600 text-white hover:bg-teal-500">Hubungi</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="relative">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div class="reveal">
+          <h1 class="text-3xl sm:text-5xl font-extrabold leading-tight">
+            Membangun Masa Depan <span class="gradient-text">Web3</span>
+          </h1>
+          <p class="mt-4 text-base sm:text-lg text-slate-600 dark:text-slate-300">
+            Developer/penggiat blockchain berfokus pada smart contract, dApp, dan infrastruktur desentralisasi. Tertarik pada DeFi, NFT, dan interoperabilitas lintas-chain.
+          </p>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="#projects" class="rounded-xl px-4 py-2 bg-slate-900 text-white dark:bg-white dark:text-slate-900 hover:opacity-90">Lihat Proyek</a>
+            <a href="#contact" class="rounded-xl px-4 py-2 border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-900">Kontak</a>
+          </div>
+          <div class="mt-6 text-sm text-slate-500 dark:text-slate-400">
+            Wallet (opsional): <span class="font-mono">0xYourWalletHere…</span>
+          </div>
+        </div>
+        <div class="reveal">
+          <div class="relative aspect-[4/3] rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm">
+            <div class="absolute inset-0 bg-gradient-to-br from-teal-400/20 via-indigo-400/10 to-fuchsia-400/20"></div>
+            <div class="absolute inset-6 rounded-xl bg-white/70 dark:bg-slate-900/70 backdrop-blur p-6 flex flex-col justify-between">
+              <div>
+                <p class="text-xs uppercase tracking-wider text-slate-500 mb-2">Stack Ringkas</p>
+                <ul class="text-sm grid grid-cols-2 gap-y-1">
+                  <li>Solidity / Rust</li>
+                  <li>Hardhat / Foundry</li>
+                  <li>Next.js / React</li>
+                  <li>Wagmi / viem</li>
+                  <li>IPFS / Pinata</li>
+                  <li>Docker / CI</li>
+                </ul>
+              </div>
+              <div class="text-xs text-slate-500">Siap kolaborasi untuk membangun protokol & produk desentralisasi.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="border-t border-slate-200 dark:border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-14">
+      <h2 class="text-2xl sm:text-3xl font-bold mb-6">Keahlian</h2>
+      <div class="grid md:grid-cols-2 gap-8 reveal">
+        <div>
+          <h3 class="font-semibold mb-3">Pengembangan Smart Contract</h3>
+          <div class="flex flex-wrap gap-2 text-sm">
+            <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800">Solidity</span>
+            <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-900 border">Rust</span>
+            <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-900 border">ERC20/721/1155</span>
+            <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-900 border">OpenZeppelin</span>
+          </div>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-3">dApp & Frontend</h3>
+          <div class="flex flex-wrap gap-2 text-sm">
+            <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-900 border">Next.js</span>
+            <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-900 border">React</span>
+            <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-900 border">Wagmi</span>
+            <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-900 border">viem/Ethers.js</span>
+          </div>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-3">Blockchain & Tools</h3>
+          <div class="flex flex-wrap gap-2 text-sm">
+            <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-900 border">Ethereum</span>
+            <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-900 border">BNB Chain</span>
+            <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-900 border">Polygon</span>
+            <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-900 border">Cosmos/CosmWasm</span>
+          </div>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-3">Infra & DevOps</h3>
+          <div class="flex flex-wrap gap-2 text-sm">
+            <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-900 border">Hardhat/Foundry</span>
+            <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-900 border">Docker</span>
+            <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-900 border">GitHub Actions</span>
+            <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-900 border">VPS/Linux</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="border-t border-slate-200 dark:border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-14">
+      <div class="flex items-end justify-between gap-4 mb-6">
+        <h2 class="text-2xl sm:text-3xl font-bold">Proyek</h2>
+        <div class="flex items-center gap-2 text-sm">
+          <label class="text-slate-500">Filter:</label>
+          <select id="filter" class="rounded-lg border border-slate-300 dark:border-slate-700 bg-transparent px-3 py-1.5">
+            <option value="all">Semua</option>
+            <option value="nft">NFT</option>
+            <option value="defi">DeFi</option>
+            <option value="infra">Infra</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="projectGrid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Card Template 1 -->
+        <article class="reveal rounded-2xl border border-slate-200 dark:border-slate-800 p-5 hover:shadow-sm transition" data-tags="nft">
+          <div class="text-xs uppercase tracking-wider text-slate-500">NFT</div>
+          <h3 class="mt-1 text-lg font-semibold">NFT Minting dApp</h3>
+          <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">Smart contract ERC721 + Next.js, integrasi wallet, mint tokenURI, dan UI responsif.</p>
+          <div class="mt-3 flex gap-3 text-sm">
+            <a class="underline hover:no-underline" href="#" target="_blank">Repo</a>
+            <a class="underline hover:no-underline" href="#" target="_blank">Demo</a>
+            <a class="underline hover:no-underline" href="#" target="_blank">Etherscan</a>
+          </div>
+        </article>
+        
+        <!-- Card Template 2 -->
+        <article class="reveal rounded-2xl border border-slate-200 dark:border-slate-800 p-5 hover:shadow-sm transition" data-tags="defi">
+          <div class="text-xs uppercase tracking-wider text-slate-500">DeFi</div>
+          <h3 class="mt-1 text-lg font-semibold">One‑Sided LP Router</h3>
+          <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">Kontrak add‑liquidity otomatis (Uniswap V2) + integrasi frontend viem/Wagmi.</p>
+          <div class="mt-3 flex gap-3 text-sm">
+            <a class="underline hover:no-underline" href="#" target="_blank">Repo</a>
+            <a class="underline hover:no-underline" href="#" target="_blank">Docs</a>
+          </div>
+        </article>
+
+        <!-- Card Template 3 -->
+        <article class="reveal rounded-2xl border border-slate-200 dark:border-slate-800 p-5 hover:shadow-sm transition" data-tags="infra">
+          <div class="text-xs uppercase tracking-wider text-slate-500">Infra</div>
+          <h3 class="mt-1 text-lg font-semibold">Node & Indexing Pipeline</h3>
+          <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">Set‑up node, sinkronisasi, monitoring, dan ETL on‑chain ke database analitik.</p>
+          <div class="mt-3 flex gap-3 text-sm">
+            <a class="underline hover:no-underline" href="#" target="_blank">Diagram</a>
+            <a class="underline hover:no-underline" href="#" target="_blank">Artikel</a>
+          </div>
+        </article>
+
+        <!-- Duplicate or add more cards as needed -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievements -->
+  <section id="achievements" class="border-t border-slate-200 dark:border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-14">
+      <h2 class="text-2xl sm:text-3xl font-bold mb-6">Pencapaian</h2>
+      <ul class="space-y-4 reveal">
+        <li class="flex items-start gap-3"><span class="mt-1">🏆</span> <div><strong>Juara/Finalis</strong> di [Hackathon/Bootcamp] — proyek [nama] (tahun)</div></li>
+        <li class="flex items-start gap-3"><span class="mt-1">🧩</span> <div>Kontributor di <strong>[DAO/Project]</strong> (PR merged, proposal, atau tooling)</div></li>
+        <li class="flex items-start gap-3"><span class="mt-1">✍️</span> <div>Artikel/Tutorial di <strong>[Medium/GitHub/Dev.to]</strong> — topik [judul]</div></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Community -->
+  <section id="community" class="border-t border-slate-200 dark:border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-14">
+      <h2 class="text-2xl sm:text-3xl font-bold mb-6">Komunitas & Networking</h2>
+      <div class="grid md:grid-cols-2 gap-6 reveal">
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-5">
+          <h3 class="font-semibold mb-2">Keanggotaan</h3>
+          <ul class="list-disc list-inside text-sm space-y-1">
+            <li>[Nama DAO / Komunitas Web3]</li>
+            <li>[Forum/Discord/Telegram]</li>
+          </ul>
+        </div>
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-5">
+          <h3 class="font-semibold mb-2">Topik yang Diminati</h3>
+          <div class="flex flex-wrap gap-2 text-sm">
+            <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-900 border">DeFi</span>
+            <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-900 border">NFT</span>
+            <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-900 border">Account Abstraction</span>
+            <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-900 border">ZK/Privacy</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="border-t border-slate-200 dark:border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-14">
+      <h2 class="text-2xl sm:text-3xl font-bold mb-6">Kontak</h2>
+      <div class="grid md:grid-cols-2 gap-8 items-start reveal">
+        <div>
+          <p class="text-slate-600 dark:text-slate-300">Terbuka untuk kolaborasi, freelance, atau full‑time. Silakan hubungi saya melalui kanal berikut:</p>
+          <div class="mt-4 flex flex-wrap gap-3">
+            <a href="mailto:you@example.com" class="rounded-xl px-4 py-2 bg-teal-600 text-white hover:bg-teal-500">Email</a>
+            <a href="#" class="rounded-xl px-4 py-2 border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-900">GitHub</a>
+            <a href="#" class="rounded-xl px-4 py-2 border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-900">LinkedIn</a>
+            <a href="#" class="rounded-xl px-4 py-2 border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-900">Farcaster/X</a>
+          </div>
+          <div class="mt-4 text-sm text-slate-500 dark:text-slate-400">
+            Lokasi: [Kota, Negara] • Preferensi kerja: Remote/Hybrid/Onsite
+          </div>
+        </div>
+        <form class="rounded-2xl border border-slate-200 dark:border-slate-800 p-5 space-y-3">
+          <div>
+            <label class="text-sm">Nama</label>
+            <input type="text" class="mt-1 w-full rounded-lg border border-slate-300 dark:border-slate-700 bg-transparent px-3 py-2" placeholder="Nama kamu"/>
+          </div>
+          <div>
+            <label class="text-sm">Email</label>
+            <input type="email" class="mt-1 w-full rounded-lg border border-slate-300 dark:border-slate-700 bg-transparent px-3 py-2" placeholder="you@example.com"/>
+          </div>
+          <div>
+            <label class="text-sm">Pesan</label>
+            <textarea rows="4" class="mt-1 w-full rounded-lg border border-slate-300 dark:border-slate-700 bg-transparent px-3 py-2" placeholder="Tulis pesan singkat…"></textarea>
+          </div>
+          <button type="button" onclick="alert('Form demo. Hubungi via email/DM ya!')" class="w-full rounded-xl px-4 py-2 bg-slate-900 text-white dark:bg-white dark:text-slate-900">Kirim</button>
+          <p class="text-xs text-slate-500">*Form ini bersifat demo. Ubah action sesuai backend kamu (Formspree/EmailJS/Next API).</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="border-t border-slate-200 dark:border-slate-800 py-10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 text-sm flex flex-col sm:flex-row items-center justify-between gap-3">
+      <div>© <span id="year"></span> [Nama Kamu]. Dibuat dengan ❤️ untuk ekosistem Web3.</div>
+      <div class="flex items-center gap-3">
+        <a href="#home" class="underline">Kembali ke atas</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear()
+
+    // Theme toggle (dark / light)
+    const themeBtn = document.getElementById('themeBtn')
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const saved = localStorage.getItem('theme')
+    if (saved === 'dark' || (!saved && prefersDark)) {
+      document.documentElement.classList.add('dark')
+    }
+    themeBtn.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark')
+      localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light')
+    })
+
+    // Reveal on scroll
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show') })
+    }, { threshold: 0.14 })
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el))
+
+    // Simple project filter
+    const filter = document.getElementById('filter')
+    const cards = Array.from(document.querySelectorAll('#projectGrid article'))
+    filter.addEventListener('change', () => {
+      const v = filter.value
+      cards.forEach(c => {
+        const ok = v === 'all' || (c.dataset.tags || '').includes(v)
+        c.style.display = ok ? '' : 'none'
+      })
+    })
+  </script>
+</body>
+</html>
